@@ -1,0 +1,9 @@
+#version 420 core
+
+in vec4 vertex_color;
+out vec4 fColor;
+
+void main(void)
+{
+    fColor = vertex_color;
+}

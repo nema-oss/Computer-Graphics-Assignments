@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblib_camera.a CMakeFiles/lib_camera.dir/algebra.cpp.o CMakeFiles/lib_camera.dir/camera.cpp.o CMakeFiles/lib_camera.dir/shaders.cpp.o
+/usr/bin/ranlib liblib_camera.a

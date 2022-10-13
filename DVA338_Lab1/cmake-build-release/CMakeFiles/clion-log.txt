@@ -1,0 +1,8 @@
+/app/extra/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=/app/extra/clion/bin/ninja/linux/ninja -G Ninja -S /home/nema/DevOgl/DVA338_Lab1 -B /home/nema/DevOgl/DVA338_Lab1/cmake-build-release
+-- Could NOT find GLEW (missing: GLEW_INCLUDE_DIRS GLEW_LIBRARIES) 
+-- Checking for module 'glut'
+--   Package 'glut', required by 'virtual:world', not found
+-- Could NOT find GLUT (missing: GLUT_glut_LIBRARY GLUT_INCLUDE_DIR) 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nema/DevOgl/DVA338_Lab1/cmake-build-release

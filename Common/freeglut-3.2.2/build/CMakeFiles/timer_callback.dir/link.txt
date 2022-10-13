@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -pedantic -rdynamic CMakeFiles/timer_callback.dir/progs/demos/timer_callback/timer.c.o -o bin/timer_callback  -Wl,-rpath,/home/nema/DevOgl/Common/freeglut-3.2.2/build/lib -lGLU -lGL -lm -lX11 -lXrandr -lXi -lm lib/libglut.so.3.11.1 -lGL -lm -lX11 -lXrandr -lXi 

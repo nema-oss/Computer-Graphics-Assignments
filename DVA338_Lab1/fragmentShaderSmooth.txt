@@ -1,0 +1,37 @@
+#version 420 core
+
+//in vec3 normalInterp;  // Surface normal
+//in vec3 vertPos;       // Vertex position
+
+in vec3 normal;
+in vec3 vertex;
+uniform vec3 light;
+uniform vec3 ka;   // Ambient reflection coefficient
+uniform vec3 kd;   // Diffuse reflection coefficient
+uniform vec3 ks;   // Specular reflection coefficient
+uniform float alfa; // Shininess
+uniform mat4 VMatrix, W, PV, MV;
+uniform vec3 Ia;
+uniform vec3 Id;
+uniform vec3 Is;
+uniform vec3 eye;
+out vec4 fColor;
+
+void main() {
+  //vec3 v = normalize(vec3(MV* vec4(vertex,1.0) ));
+  //vec3 N = normalize(mat3(transpose(inverse(MV)))*normal);
+  vec3 l = (VMatrix*vec4(light,1.0)).xyz;
+  vec3 N = normalize(normal);
+  vec3 L = normalize(l - vertex);
+  vec3 V = normalize(-vertex); // Vector to viewer
+  vec3 R = normalize(reflect(-L, N));
+
+  float diffuse = max(dot(N, L), 0.0);
+  float specAngle = max(dot(R, V), 0.0);
+  float specular = pow(specAngle, alfa);
+
+  fColor = vec4(ka * Ia +
+                      diffuse * kd * Id +
+                      specular * ks * Is, 1.0);
+
+}

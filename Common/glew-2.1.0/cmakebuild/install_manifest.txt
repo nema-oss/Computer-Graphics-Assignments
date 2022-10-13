@@ -1,0 +1,14 @@
+/home/nema/DevOgl/Common/Installs/lib64/libGLEW.so.2.1.0
+/home/nema/DevOgl/Common/Installs/lib64/libGLEW.so.2.1
+/home/nema/DevOgl/Common/Installs/lib64/libGLEW.so
+/home/nema/DevOgl/Common/Installs/lib64/libGLEW.a
+/home/nema/DevOgl/Common/Installs/bin/glewinfo
+/home/nema/DevOgl/Common/Installs/bin/visualinfo
+/home/nema/DevOgl/Common/Installs/lib64/pkgconfig/glew.pc
+/home/nema/DevOgl/Common/Installs/include/GL/wglew.h
+/home/nema/DevOgl/Common/Installs/include/GL/glew.h
+/home/nema/DevOgl/Common/Installs/include/GL/glxew.h
+/home/nema/DevOgl/Common/Installs/lib64/cmake/glew/glew-targets.cmake
+/home/nema/DevOgl/Common/Installs/lib64/cmake/glew/glew-targets-release.cmake
+/home/nema/DevOgl/Common/Installs/lib64/cmake/glew/glew-config.cmake
+/home/nema/DevOgl/Common/Installs/lib64/cmake/glew/CopyImportedTargetProperties.cmake

@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblib_mesh.a CMakeFiles/lib_mesh.dir/algebra.cpp.o CMakeFiles/lib_mesh.dir/mesh.cpp.o
+/usr/bin/ranlib liblib_mesh.a

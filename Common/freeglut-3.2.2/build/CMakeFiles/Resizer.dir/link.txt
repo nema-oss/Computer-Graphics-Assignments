@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/Resizer.dir/progs/demos/Resizer/Resizer.cpp.o -o bin/Resizer  -Wl,-rpath,/home/nema/DevOgl/Common/freeglut-3.2.2/build/lib -lGLU -lGL -lm -lX11 -lXrandr -lXi -lm lib/libglut.so.3.11.1 -lGL -lm -lX11 -lXrandr -lXi 

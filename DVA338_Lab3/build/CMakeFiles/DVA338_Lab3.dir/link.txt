@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/DVA338_Lab3.dir/Ray.cpp.o CMakeFiles/DVA338_Lab3.dir/Main.cpp.o CMakeFiles/DVA338_Lab3.dir/Surface.cpp.o CMakeFiles/DVA338_Lab3.dir/Triangle.cpp.o -o DVA338_Lab3  /usr/lib64/libOpenGL.so /usr/lib64/libGLX.so /usr/lib64/libGLU.so /usr/lib64/libGLEW.so -lglut -lglut /usr/lib64/libGLEW.so liblib_Ray.a liblib_Sphere.a 

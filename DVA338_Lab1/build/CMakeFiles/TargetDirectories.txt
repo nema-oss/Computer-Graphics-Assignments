@@ -1,0 +1,7 @@
+/home/nema/DevOgl/DVA338_Lab1/build/CMakeFiles/lib_algebra.dir
+/home/nema/DevOgl/DVA338_Lab1/build/CMakeFiles/lib_camera.dir
+/home/nema/DevOgl/DVA338_Lab1/build/CMakeFiles/lib_mesh.dir
+/home/nema/DevOgl/DVA338_Lab1/build/CMakeFiles/DVA338_Lab1.dir
+/home/nema/DevOgl/DVA338_Lab1/build/CMakeFiles/test.dir
+/home/nema/DevOgl/DVA338_Lab1/build/CMakeFiles/edit_cache.dir
+/home/nema/DevOgl/DVA338_Lab1/build/CMakeFiles/rebuild_cache.dir

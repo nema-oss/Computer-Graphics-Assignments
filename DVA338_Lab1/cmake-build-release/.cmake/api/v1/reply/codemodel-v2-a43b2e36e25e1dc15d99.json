@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DVA338_Lab1_Proj",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "DVA338_Lab1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DVA338_Lab1-Release-bfb0d0985aad8e9ac312.json",
+					"name" : "DVA338_Lab1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lib_algebra::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lib_algebra-Release-a4aa1190762c151148f1.json",
+					"name" : "lib_algebra",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lib_camera::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lib_camera-Release-7bdb0b042d6f2fc0adbf.json",
+					"name" : "lib_camera",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lib_mesh::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lib_mesh-Release-18b9090dbc28c2b541b8.json",
+					"name" : "lib_mesh",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/nema/DevOgl/DVA338_Lab1/cmake-build-release",
+		"source" : "/home/nema/DevOgl/DVA338_Lab1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

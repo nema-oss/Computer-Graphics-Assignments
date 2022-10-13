@@ -1,0 +1,62 @@
+#version 420 core
+
+layout(triangles) in;
+
+layout(line_strip, max_vertices=224) out;
+
+uniform mat4 PV, MV;
+
+in Vertex
+{
+  vec4 normal;
+  vec4 color;
+} vertex[];
+
+out vec4 vertex_color;
+
+void createLine(vec4 P, vec4 N, vec4 color){
+    gl_Position = P;
+    vertex_color = color;
+    EmitVertex();
+    gl_Position = P + N*0.2;
+    vertex_color = vec4(0.5,0.2,0.2,1.0);
+    EmitVertex();
+    EndPrimitive();
+
+}
+
+void main()
+{
+
+    for(int i=0; i<gl_in.length(); i++)
+    {        createLine(gl_in[i].gl_Position, vertex[i].normal, vertex[i].color);
+    }
+    vec4 A=gl_in[0].gl_Position;
+    vec4 B=gl_in[1].gl_Position;
+    vec4 C=gl_in[2].gl_Position;
+
+    vec4 curPos = A;
+    vec4 curN = vertex[0].normal;
+    vec4 curC = vertex[0].color;
+    vec4 delta = (C-B)/7;
+    vec4 curDir = (B-A)/8;
+    vec4 target = B;
+    vec4 targetN = vertex[1].normal;
+    vec4 targetC = vertex[1].color;
+
+    for(int i=0; i<6; i++){
+        for(int j=0; j<8; j++){
+            curPos += curDir;
+            curN =normalize(distance(A, curPos)/distance(A,B)*targetN + distance(target, curPos)/distance(A,B)*vertex[0].normal);
+            curC = (distance(A, curPos)/distance(A,B)*targetC + distance(target, curPos)/distance(A,B)*vertex[0].color);
+            createLine(curPos, curN, curC);
+
+        }
+        target += delta;
+        targetN = normalize(vertex[1].normal*distance(target, C)/distance(B,C) + vertex[2].normal*distance(target, B)/distance(B,C));
+        targetC = (vertex[1].color*distance(target, C)/distance(B,C) + vertex[2].color*distance(target, B)/distance(B,C));
+        curDir = (target-A)/8;
+        curPos = A;
+    }
+
+}

@@ -1,0 +1,633 @@
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(1):  CMAKE_MINIMUM_REQUIRED(VERSION 3.0.0 FATAL_ERROR )Running with expanded trace output on.
+
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(2):  PROJECT(freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(5):  INCLUDE(GNUInstallDirs )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(14):  SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY /home/nema/DevOgl/Common/freeglut-3.2.2/build/bin )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(15):  SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY /home/nema/DevOgl/Common/freeglut-3.2.2/build/lib )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(16):  SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY /home/nema/DevOgl/Common/freeglut-3.2.2/build/lib )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(20):  set(VERSION_MAJOR 3 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(21):  set(VERSION_MINOR 2 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(22):  set(VERSION_PATCH 2 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(23):  set(VERSION 3.2.2 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(26):  CONFIGURE_FILE(src/fg_version.h.in src/fg_version.h )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(29):  set(SO_MAJOR 3 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(30):  set(SO_MINOR 11 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(31):  set(SO_REV 1 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(36):  OPTION(FREEGLUT_BUILD_SHARED_LIBS Build FreeGLUT shared library. ON )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(37):  OPTION(FREEGLUT_BUILD_STATIC_LIBS Build FreeGLUT static library. ON )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(40):  OPTION(FREEGLUT_PRINT_ERRORS Lib prints errors to stderr ON )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(42):  OPTION(FREEGLUT_PRINT_WARNINGS Lib prints warnings to stderr ON )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(47):  IF(MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(49):  ELSE()
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(50):  SET(INSTALL_PDB OFF )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(54):  IF(ANDROID )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(56):  ELSE()
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(57):  OPTION(FREEGLUT_GLES Use OpenGL ES (requires EGL) OFF )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(61):  IF(WIN32 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(63):  ELSE()
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(64):  OPTION(FREEGLUT_REPLACE_GLUT Be a replacement for GLUT ON )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(67):  IF(NOT WIN32 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(69):  OPTION(FREEGLUT_WAYLAND Use Wayland (no X11) OFF )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(73):  SET(FREEGLUT_HEADERS include/GL/freeglut.h include/GL/freeglut_ucall.h include/GL/freeglut_ext.h include/GL/freeglut_std.h )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(79):  IF(FREEGLUT_REPLACE_GLUT )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(80):  LIST(APPEND FREEGLUT_HEADERS include/GL/glut.h )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(84):  SET(FREEGLUT_SRCS include/GL/freeglut.h;include/GL/freeglut_ucall.h;include/GL/freeglut_ext.h;include/GL/freeglut_std.h;include/GL/glut.h src/fg_callbacks.c src/fg_cursor.c src/fg_display.c src/fg_ext.c src/fg_font_data.c src/fg_gamemode.c src/fg_geometry.c src/fg_gl2.c src/fg_gl2.h src/fg_init.c src/fg_init.h src/fg_internal.h src/fg_callback_macros.h src/fg_input_devices.c src/fg_joystick.c src/fg_main.c src/fg_misc.c src/fg_overlay.c src/fg_spaceball.c src/fg_state.c src/fg_stroke_mono_roman.c src/fg_stroke_roman.c src/fg_structure.c src/fg_teapot.c src/fg_teapot_data.h src/fg_videoresize.c src/fg_window.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(115):  IF(NOT FREEGLUT_GLES )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(116):  LIST(APPEND FREEGLUT_SRCS src/fg_font.c src/fg_menu.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(126):  IF(WIN32 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(152):  ELSEIF(ANDROID OR BLACKBERRY )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(189):  ELSE()
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(191):  IF(FREEGLUT_WAYLAND )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(209):  ELSE()
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(210):  LIST(APPEND FREEGLUT_SRCS src/x11/fg_cursor_x11.c src/x11/fg_ext_x11.c src/x11/fg_gamemode_x11.c src/x11/fg_glutfont_definitions_x11.c src/x11/fg_init_x11.c src/x11/fg_internal_x11.h src/x11/fg_input_devices_x11.c src/x11/fg_joystick_x11.c src/x11/fg_main_x11.c src/x11/fg_menu_x11.c src/x11/fg_spaceball_x11.c src/x11/fg_state_x11.c src/x11/fg_structure_x11.c src/x11/fg_window_x11.c src/x11/fg_xinput_x11.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(227):  IF(NOT ( FREEGLUT_GLES ) )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(228):  LIST(APPEND FREEGLUT_SRCS src/x11/fg_internal_x11_glx.h src/x11/fg_display_x11_glx.c src/x11/fg_state_x11_glx.c src/x11/fg_state_x11_glx.h src/x11/fg_window_x11_glx.c src/x11/fg_window_x11_glx.h )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(241):  IF(FREEGLUT_GLES OR FREEGLUT_WAYLAND )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(262):  IF(FREEGLUT_GLES )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(265):  ELSE()
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(266):  FIND_PACKAGE(OpenGL REQUIRED )
+CMake Warning (dev) at /usr/share/cmake/Modules/FindOpenGL.cmake:315 (message):
+  Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
+  available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  FindOpenGL found both a legacy GL library:
+
+    OPENGL_gl_LIBRARY: /usr/lib64/libGL.so
+
+  and GLVND libraries for OpenGL and GLX:
+
+    OPENGL_opengl_LIBRARY: /usr/lib64/libOpenGL.so
+    OPENGL_glx_LIBRARY: /usr/lib64/libGLX.so
+
+  OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
+  compatibility with CMake 3.10 and below the legacy GL library will be used.
+Call Stack (most recent call first):
+  CMakeLists.txt:266 (FIND_PACKAGE)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(267):  LIST(APPEND LIBS /usr/lib64/libGL.so )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(268):  INCLUDE_DIRECTORIES(/usr/include )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(272):  IF(FREEGLUT_WAYLAND )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(278):  IF(NOT WIN32 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(280):  LIST(APPEND LIBS m )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(282):  LIST(APPEND CMAKE_REQUIRED_LIBRARIES m )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(285):  IF(WIN32 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(308):  IF(CMAKE_COMPILER_IS_GNUCC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(309):  SET(CMAKE_C_FLAGS  -Wall )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(310):  IF(NOT ( ANDROID OR BLACKBERRY OR FREEGLUT_WAYLAND ) )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(312):  SET(CMAKE_C_FLAGS  -Wall -pedantic )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(316):  INCLUDE(CheckIncludeFiles )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(317):  IF(UNIX AND NOT ( ANDROID OR BLACKBERRY OR FREEGLUT_WAYLAND ) )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(318):  FIND_PACKAGE(X11 REQUIRED )
+CMake Warning (dev) at /usr/share/cmake/Modules/FindX11.cmake:822 (mark_as_advanced):
+  Policy CMP0102 is not set: The variable named "X11_LIBRARIES" is not in the
+  cache.  This results in an empty cache entry which is no longer created
+  when policy CMP0102 is set to NEW.  Run "cmake --help-policy CMP0102" for
+  policy details.  Use the cmake_policy command to set the policy and
+  suppress this warning.
+Call Stack (most recent call first):
+  CMakeLists.txt:318 (FIND_PACKAGE)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(319):  INCLUDE_DIRECTORIES(/usr/include )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(320):  LIST(APPEND LIBS /usr/lib64/libX11.so )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(321):  IF(X11_Xrandr_FOUND )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(322):  SET(HAVE_X11_EXTENSIONS_XRANDR_H TRUE )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(323):  LIST(APPEND LIBS /usr/lib64/libXrandr.so )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(325):  IF(X11_xf86vmode_FOUND )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(329):  IF(X11_Xinput_FOUND )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(331):  CHECK_INCLUDE_FILES(/usr/include/X11/extensions/XInput2.h HAVE_X11_EXTENSIONS_XINPUT2_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(332):  LIST(APPEND LIBS /usr/lib64/libXi.so )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(337):  IF(ANDROID )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(341):  ELSEIF(BLACKBERRY )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(353):  INCLUDE(CheckFunctionExists )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(354):  INCLUDE(CheckTypeSize )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(355):  INCLUDE(CheckCCompilerFlag )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(356):  CHECK_INCLUDE_FILES(sys/types.h HAVE_SYS_TYPES_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(357):  CHECK_INCLUDE_FILES(unistd.h HAVE_UNISTD_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(358):  CHECK_INCLUDE_FILES(sys/time.h HAVE_SYS_TIME_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(359):  CHECK_INCLUDE_FILES(stdbool.h HAVE_STDBOOL_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(360):  CHECK_INCLUDE_FILES(sys/param.h HAVE_SYS_PARAM_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(361):  CHECK_INCLUDE_FILES(sys/ioctl.h HAVE_SYS_IOCTL_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(362):  CHECK_INCLUDE_FILES(fcntl.h HAVE_FCNTL_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(363):  CHECK_INCLUDE_FILES(usbhid.h HAVE_USBHID_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(364):  CHECK_FUNCTION_EXISTS(gettimeofday HAVE_GETTIMEOFDAY )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(365):  CHECK_FUNCTION_EXISTS(XParseGeometry HAVE_XPARSEGEOMETRY )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(366):  IF(NOT HAVE_XPARSEGEOMETRY )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(367):  LIST(APPEND FREEGLUT_SRCS src/util/xparsegeometry_repl.c src/util/xparsegeometry_repl.h )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(370):  SET(NEED_XPARSEGEOMETRY_IMPL TRUE )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(373):  CHECK_INCLUDE_FILES(stdint.h HAVE_STDINT_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(374):  CHECK_INCLUDE_FILES(inttypes.h HAVE_INTTYPES_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(375):  IF(NOT ( HAVE_STDINT_H OR HAVE_INTTYPES_H ) )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(389):  CONFIGURE_FILE(/home/nema/DevOgl/Common/freeglut-3.2.2/config.h.in /home/nema/DevOgl/Common/freeglut-3.2.2/build/config.h )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(390):  INCLUDE_DIRECTORIES(BEFORE /home/nema/DevOgl/Common/freeglut-3.2.2/build /home/nema/DevOgl/Common/freeglut-3.2.2/include /home/nema/DevOgl/Common/freeglut-3.2.2/src )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(391):  ADD_DEFINITIONS(-DHAVE_CONFIG_H )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(392):  IF(WIN32 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(402):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(403):  ADD_LIBRARY(freeglut SHARED include/GL/freeglut.h;include/GL/freeglut_ucall.h;include/GL/freeglut_ext.h;include/GL/freeglut_std.h;include/GL/glut.h;src/fg_callbacks.c;src/fg_cursor.c;src/fg_display.c;src/fg_ext.c;src/fg_font_data.c;src/fg_gamemode.c;src/fg_geometry.c;src/fg_gl2.c;src/fg_gl2.h;src/fg_init.c;src/fg_init.h;src/fg_internal.h;src/fg_callback_macros.h;src/fg_input_devices.c;src/fg_joystick.c;src/fg_main.c;src/fg_misc.c;src/fg_overlay.c;src/fg_spaceball.c;src/fg_state.c;src/fg_stroke_mono_roman.c;src/fg_stroke_roman.c;src/fg_structure.c;src/fg_teapot.c;src/fg_teapot_data.h;src/fg_videoresize.c;src/fg_window.c;src/fg_font.c;src/fg_menu.c;src/x11/fg_cursor_x11.c;src/x11/fg_ext_x11.c;src/x11/fg_gamemode_x11.c;src/x11/fg_glutfont_definitions_x11.c;src/x11/fg_init_x11.c;src/x11/fg_internal_x11.h;src/x11/fg_input_devices_x11.c;src/x11/fg_joystick_x11.c;src/x11/fg_main_x11.c;src/x11/fg_menu_x11.c;src/x11/fg_spaceball_x11.c;src/x11/fg_state_x11.c;src/x11/fg_structure_x11.c;src/x11/fg_window_x11.c;src/x11/fg_xinput_x11.c;src/x11/fg_internal_x11_glx.h;src/x11/fg_display_x11_glx.c;src/x11/fg_state_x11_glx.c;src/x11/fg_state_x11_glx.h;src/x11/fg_window_x11_glx.c;src/x11/fg_window_x11_glx.h;src/util/xparsegeometry_repl.c;src/util/xparsegeometry_repl.h )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(405):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(406):  ADD_LIBRARY(freeglut_static STATIC include/GL/freeglut.h;include/GL/freeglut_ucall.h;include/GL/freeglut_ext.h;include/GL/freeglut_std.h;include/GL/glut.h;src/fg_callbacks.c;src/fg_cursor.c;src/fg_display.c;src/fg_ext.c;src/fg_font_data.c;src/fg_gamemode.c;src/fg_geometry.c;src/fg_gl2.c;src/fg_gl2.h;src/fg_init.c;src/fg_init.h;src/fg_internal.h;src/fg_callback_macros.h;src/fg_input_devices.c;src/fg_joystick.c;src/fg_main.c;src/fg_misc.c;src/fg_overlay.c;src/fg_spaceball.c;src/fg_state.c;src/fg_stroke_mono_roman.c;src/fg_stroke_roman.c;src/fg_structure.c;src/fg_teapot.c;src/fg_teapot_data.h;src/fg_videoresize.c;src/fg_window.c;src/fg_font.c;src/fg_menu.c;src/x11/fg_cursor_x11.c;src/x11/fg_ext_x11.c;src/x11/fg_gamemode_x11.c;src/x11/fg_glutfont_definitions_x11.c;src/x11/fg_init_x11.c;src/x11/fg_internal_x11.h;src/x11/fg_input_devices_x11.c;src/x11/fg_joystick_x11.c;src/x11/fg_main_x11.c;src/x11/fg_menu_x11.c;src/x11/fg_spaceball_x11.c;src/x11/fg_state_x11.c;src/x11/fg_structure_x11.c;src/x11/fg_window_x11.c;src/x11/fg_xinput_x11.c;src/x11/fg_internal_x11_glx.h;src/x11/fg_display_x11_glx.c;src/x11/fg_state_x11_glx.c;src/x11/fg_state_x11_glx.h;src/x11/fg_window_x11_glx.c;src/x11/fg_window_x11_glx.h;src/util/xparsegeometry_repl.c;src/util/xparsegeometry_repl.h )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(410):  SET(LIBNAME freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(411):  IF(WIN32 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(433):  ELSE()
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(449):  IF(FREEGLUT_GLES )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(451):  ELSE()
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(452):  IF(FREEGLUT_REPLACE_GLUT )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(453):  SET(LIBNAME glut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(457):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(458):  SET_TARGET_PROPERTIES(freeglut PROPERTIES VERSION 3.11.1 SOVERSION 3 OUTPUT_NAME glut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(460):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(461):  SET_TARGET_PROPERTIES(freeglut_static PROPERTIES OUTPUT_NAME glut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(463):  IF(ANDROID )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(484):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(485):  TARGET_LINK_LIBRARIES(freeglut /usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(486):  TARGET_COMPILE_DEFINITIONS(freeglut PUBLIC  )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(488):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(489):  TARGET_LINK_LIBRARIES(freeglut_static /usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(490):  TARGET_COMPILE_DEFINITIONS(freeglut_static PUBLIC  )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(493):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(494):  INSTALL(TARGETS freeglut EXPORT FreeGLUTTargets RUNTIME DESTINATION bin LIBRARY DESTINATION lib64 ARCHIVE DESTINATION lib64 INCLUDES DESTINATION include )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(500):  IF(INSTALL_PDB )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(514):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(515):  INSTALL(TARGETS freeglut_static EXPORT FreeGLUTTargets RUNTIME DESTINATION bin LIBRARY DESTINATION lib64 ARCHIVE DESTINATION lib64 INCLUDES DESTINATION include )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(522):  INSTALL(FILES include/GL/freeglut.h;include/GL/freeglut_ucall.h;include/GL/freeglut_ext.h;include/GL/freeglut_std.h;include/GL/glut.h DESTINATION include/GL COMPONENT Devel )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(527):  option(FREEGLUT_BUILD_DEMOS Build FreeGLUT demos. ON )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(529):  SET(DEMO_LIBS /usr/lib64/libGLU.so /usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(531):  IF(NOT WIN32 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(532):  LIST(APPEND DEMO_LIBS m )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(535):  MACRO(ADD_DEMO name )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(554):  ADD_DEMO(CallbackMaker progs/demos/CallbackMaker/CallbackMaker.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(CallbackMaker progs/demos/CallbackMaker/CallbackMaker.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(CallbackMaker /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(CallbackMaker_static progs/demos/CallbackMaker/CallbackMaker.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(CallbackMaker_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(555):  ADD_DEMO(Fractals progs/demos/Fractals/fractals.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(Fractals progs/demos/Fractals/fractals.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(Fractals /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(Fractals_static progs/demos/Fractals/fractals.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(Fractals_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(556):  ADD_DEMO(Fractals_random progs/demos/Fractals_random/fractals_random.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(Fractals_random progs/demos/Fractals_random/fractals_random.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(Fractals_random /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(Fractals_random_static progs/demos/Fractals_random/fractals_random.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(Fractals_random_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(557):  ADD_DEMO(Lorenz progs/demos/Lorenz/lorenz.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(Lorenz progs/demos/Lorenz/lorenz.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(Lorenz /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(Lorenz_static progs/demos/Lorenz/lorenz.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(Lorenz_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(558):  IF(NOT WIN32 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(559):  ADD_DEMO(One progs/demos/One/one.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(One progs/demos/One/one.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(One /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(One_static progs/demos/One/one.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(One_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(564):  ADD_DEMO(Resizer progs/demos/Resizer/Resizer.cpp )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(Resizer progs/demos/Resizer/Resizer.cpp )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(Resizer /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(Resizer_static progs/demos/Resizer/Resizer.cpp )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(Resizer_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(565):  ADD_DEMO(multi-touch progs/demos/multi-touch/multi-touch.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(multi-touch progs/demos/multi-touch/multi-touch.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(multi-touch /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(multi-touch_static progs/demos/multi-touch/multi-touch.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(multi-touch_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(566):  ADD_DEMO(shapes progs/demos/shapes/shapes.c progs/demos/shapes/glmatrix.h progs/demos/shapes/glmatrix.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(shapes progs/demos/shapes/shapes.c;progs/demos/shapes/glmatrix.h;progs/demos/shapes/glmatrix.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(shapes /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(shapes_static progs/demos/shapes/shapes.c;progs/demos/shapes/glmatrix.h;progs/demos/shapes/glmatrix.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(shapes_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(569):  ADD_DEMO(smooth_opengl3 progs/demos/smooth_opengl3/smooth_opengl3.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(smooth_opengl3 progs/demos/smooth_opengl3/smooth_opengl3.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(smooth_opengl3 /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(smooth_opengl3_static progs/demos/smooth_opengl3/smooth_opengl3.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(smooth_opengl3_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(570):  IF(UNIX )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(571):  ADD_DEMO(spaceball progs/demos/spaceball/spaceball.c progs/demos/spaceball/vmath.c progs/demos/spaceball/vmath.h )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(spaceball progs/demos/spaceball/spaceball.c;progs/demos/spaceball/vmath.c;progs/demos/spaceball/vmath.h )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(spaceball /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(spaceball_static progs/demos/spaceball/spaceball.c;progs/demos/spaceball/vmath.c;progs/demos/spaceball/vmath.h )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(spaceball_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(575):  ADD_DEMO(subwin progs/demos/subwin/subwin.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(subwin progs/demos/subwin/subwin.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(subwin /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(subwin_static progs/demos/subwin/subwin.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(subwin_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(576):  ADD_DEMO(timer progs/demos/timer/timer.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(timer progs/demos/timer/timer.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(timer /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(timer_static progs/demos/timer/timer.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(timer_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(577):  ADD_DEMO(timer_callback progs/demos/timer_callback/timer.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(536):  IF(FREEGLUT_BUILD_DEMOS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(537):  IF(FREEGLUT_BUILD_SHARED_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(538):  ADD_EXECUTABLE(timer_callback progs/demos/timer_callback/timer.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(539):  TARGET_LINK_LIBRARIES(timer_callback /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(540):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(544):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(545):  ADD_EXECUTABLE(timer_callback_static progs/demos/timer_callback/timer.c )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(546):  TARGET_LINK_LIBRARIES(timer_callback_static /usr/lib64/libGLU.so;/usr/lib64/libGL.so;m;/usr/lib64/libX11.so;/usr/lib64/libXrandr.so;/usr/lib64/libXi.so;m freeglut_static )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(547):  IF(WIN32 AND MSVC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(583):  IF(WIN32 )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(585):  ELSEIF(FREEGLUT_GLES )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(599):  ELSE()
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(600):  IF(FREEGLUT_WAYLAND )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(602):  ELSE()
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(603):  SET(PC_LIBS_PRIVATE -lX11 -lXxf86vm -lXrandr -lGL -lm )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(608):  SET(PC_LIBNAME glut )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(609):  SET(PC_FILENAME glut.pc )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(610):  IF(FREEGLUT_GLES )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(613):  IF(FREEGLUT_BUILD_STATIC_LIBS )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(614):  LIST(APPEND PC_CFLAGS -DFREEGLUT_STATIC )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(616):  CONFIGURE_FILE(/home/nema/DevOgl/Common/freeglut-3.2.2/freeglut.pc.in /home/nema/DevOgl/Common/freeglut-3.2.2/build/freeglut.pc @ONLY )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(617):  INSTALL(FILES /home/nema/DevOgl/Common/freeglut-3.2.2/build/freeglut.pc DESTINATION lib64/pkgconfig/ RENAME glut.pc COMPONENT Devel )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(621):  INCLUDE(CMakePackageConfigHelpers )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(622):  WRITE_BASIC_PACKAGE_VERSION_FILE(/home/nema/DevOgl/Common/freeglut-3.2.2/build/FreeGLUT/FreeGLUTConfigVersion.cmake VERSION 3.2.2 COMPATIBILITY AnyNewerVersion )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(629):  EXPORT(EXPORT FreeGLUTTargets FILE /home/nema/DevOgl/Common/freeglut-3.2.2/build/FreeGLUT/FreeGLUTTargets.cmake NAMESPACE FreeGLUT:: )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(633):  CONFIGURE_FILE(FreeGLUTConfig.cmake.in /home/nema/DevOgl/Common/freeglut-3.2.2/build/FreeGLUT/FreeGLUTConfig.cmake @ONLY )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(637):  SET(ConfigPackageLocation lib64/cmake/FreeGLUT )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(638):  INSTALL(EXPORT FreeGLUTTargets FILE FreeGLUTTargets.cmake NAMESPACE FreeGLUT:: DESTINATION lib64/cmake/FreeGLUT )
+/home/nema/DevOgl/Common/freeglut-3.2.2/CMakeLists.txt(643):  INSTALL(FILES /home/nema/DevOgl/Common/freeglut-3.2.2/build/FreeGLUT/FreeGLUTConfig.cmake /home/nema/DevOgl/Common/freeglut-3.2.2/build/FreeGLUT/FreeGLUTConfigVersion.cmake DESTINATION lib64/cmake/FreeGLUT COMPONENT Devel )
+-- Configuring done
+CMake Warning (dev) at CMakeLists.txt:403 (ADD_LIBRARY):
+  Policy CMP0060 is not set: Link libraries by full path even in implicit
+  directories.  Run "cmake --help-policy CMP0060" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+  Some library files are in directories implicitly searched by the linker
+  when invoked for C:
+
+   /usr/lib64/libGL.so
+   /usr/lib64/libX11.so
+   /usr/lib64/libXi.so
+   /usr/lib64/libXrandr.so
+
+  For compatibility with older versions of CMake, the generated link line
+  will ask the linker to search for these by library name.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:538 (ADD_EXECUTABLE):
+  Policy CMP0060 is not set: Link libraries by full path even in implicit
+  directories.  Run "cmake --help-policy CMP0060" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+  Some library files are in directories implicitly searched by the linker
+  when invoked for C:
+
+   /usr/lib64/libGLU.so
+
+  For compatibility with older versions of CMake, the generated link line
+  will ask the linker to search for these by library name.
+Call Stack (most recent call first):
+  CMakeLists.txt:554 (ADD_DEMO)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Generating done
+-- Build files have been written to: /home/nema/DevOgl/Common/freeglut-3.2.2/build

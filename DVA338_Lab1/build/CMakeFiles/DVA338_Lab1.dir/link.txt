@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/DVA338_Lab1.dir/main.cpp.o CMakeFiles/DVA338_Lab1.dir/shaders.cpp.o -o DVA338_Lab1  /usr/lib64/libOpenGL.so /usr/lib64/libGLX.so /usr/lib64/libGLU.so /usr/lib64/libGLEW.so -lglut -lglut /usr/lib64/libGLEW.so liblib_algebra.a liblib_camera.a liblib_mesh.a ../test/prebuilds/Release/camera_tests.lib ../test/prebuilds/Release/math_tests.lib 

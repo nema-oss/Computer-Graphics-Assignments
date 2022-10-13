@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblib_Sphere.a CMakeFiles/lib_Sphere.dir/Sphere.cpp.o CMakeFiles/lib_Sphere.dir/Ray.cpp.o
+/usr/bin/ranlib liblib_Sphere.a

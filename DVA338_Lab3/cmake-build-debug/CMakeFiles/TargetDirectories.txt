@@ -1,0 +1,6 @@
+/home/nema/DevOgl/DVA338_Lab3/cmake-build-debug/CMakeFiles/lib_Ray.dir
+/home/nema/DevOgl/DVA338_Lab3/cmake-build-debug/CMakeFiles/lib_Sphere.dir
+/home/nema/DevOgl/DVA338_Lab3/cmake-build-debug/CMakeFiles/DVA338_Lab3.dir
+/home/nema/DevOgl/DVA338_Lab3/cmake-build-debug/CMakeFiles/test.dir
+/home/nema/DevOgl/DVA338_Lab3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nema/DevOgl/DVA338_Lab3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

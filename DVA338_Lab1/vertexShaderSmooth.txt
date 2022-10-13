@@ -1,0 +1,24 @@
+#version 420 core
+
+in vec3 vPos;
+in vec3 vNorm;
+uniform mat4 PV, MV, VMatrix, W;
+
+/*out vertexAttrib{
+    vec3 normalInterp;
+
+    vec3 vertPos;
+} v;*/
+
+out vec3 normal;
+out vec3 vertex;
+
+void main(){
+  vec4 vertPos4 = MV * vec4(vPos, 1.0);
+  //v.vertPos = normalize(vertPos4.xyz);
+  //v.normalInterp = mat3(transpose(inverse(MV))) * vNorm;
+  vertex = vertPos4.xyz;
+  normal = mat3(transpose(inverse(MV))) * vNorm;
+  //normalInterp = vNorm;
+  gl_Position = PV * vec4(vPos, 1.0f);
+}

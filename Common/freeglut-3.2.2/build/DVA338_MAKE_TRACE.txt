@@ -1,0 +1,10 @@
+[  1%] Building C object CMakeFiles/freeglut.dir/src/fg_callbacks.c.o
+In file included from /home/nema/DevOgl/Common/freeglut-3.2.2/include/GL/freeglut.h:17,
+                 from /home/nema/DevOgl/Common/freeglut-3.2.2/src/fg_callbacks.c:28:
+/home/nema/DevOgl/Common/freeglut-3.2.2/include/GL/freeglut_std.h:144:13: fatal error: GL/glu.h: No such file or directory
+  144 | #   include <GL/glu.h>
+      |             ^~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/freeglut.dir/build.make:76: CMakeFiles/freeglut.dir/src/fg_callbacks.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/freeglut.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2
